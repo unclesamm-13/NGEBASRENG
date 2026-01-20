@@ -63,7 +63,9 @@ python main.py
 
 ## 👨‍💻 Author
 Muhammad Farel (unclesamm-13)
+
 Mahasiswa Semester 3 Teknik Informatika – Pemrograman Visual
+
 Pontianak, Kalimantan Barat, Indonesia
 
 

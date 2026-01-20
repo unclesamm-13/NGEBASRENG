@@ -3,19 +3,6 @@ import os, shutil
 
 from pathlib import Path
 
-# Tentukan lokasi database permanen
-db_path = Path.home() / "Documents" / "NGEBASRENG" / "basreng.db"
-
-# Buat folder jika belum ada
-os.makedirs(db_path.parent, exist_ok=True)
-
-# Copy database kosong dari template ke lokasi permanen
-if not db_path.exists():
-    shutil.copy("database/basreng.db", db_path)
-
-# Gunakan db_path sebagai database utama
-DATABASE_FILE = str(db_path)
-
 from PySide6.QtWidgets import (
     QApplication, QMainWindow, QWidget,
     QHBoxLayout, QVBoxLayout, QPushButton,
@@ -26,6 +13,10 @@ from PySide6.QtGui import QIcon
 
 from ui.splash import SplashScreen
 from utils.db import init_db
+from utils.db import get_connection
+
+conn = get_connection()
+cursor = conn.cursor()
 
 from ui.dashboard import DashboardPage
 from ui.pembelian import PembelianPage

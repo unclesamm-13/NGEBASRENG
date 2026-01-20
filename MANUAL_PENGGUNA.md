@@ -1,115 +1,57 @@
-📄 Lisensi
+📖 Manual Pengguna – NGEBASRENG
+1. Pendahuluan
+NGEBASRENG adalah aplikasi berbasis Python + PySide6 untuk mengelola penjualan basreng (baso goreng). Aplikasi ini menyediakan fitur pencatatan transaksi, hutang, piutang, serta laporan ringkas dalam bentuk dashboard.
 
-Aplikasi ini dibuat untuk keperluan akademik (UAS).
+2. Persyaratan Sistem
+- OS: Windows 10/11, Linux, atau macOS
+- Python: Versi 3.10 atau lebih baru
+- Library tambahan: PySide6, SQLite3, dan modul Python standar
 
-# 📕 2️⃣ MANUAL PENGGUNA (USER MANUAL)
+3. Instalasi
+    1. Clone repository:
+        git clone https://github.com/unclesamm-13/NGEBASRENG.git
+        cd NGEBASRENG
+    2. Buat virtual environment (opsional):
+        python -m venv venv
+        venv\Scripts\activate   # Windows
+        source venv/bin/activate # Linux/Mac
+   3. Install dependencies:
+        pip install -r requirements.txt
 
-## 🧾 MANUAL PENGGUNA  
-**Aplikasi NGEBASRENG**
+4. Menjalankan Aplikasi
+   1.Pastikan berada di folder project.
+   2.Jalankan perintah:
+       python main.py
+   3.Tampilan GUI akan muncul dengan menu utama.
+   
+5. Fitur Utama
+- Dashboard
+Menampilkan ringkasan hutang (pembelian) dan piutang (penjualan).
+- Transaksi Penjualan
+Input data penjualan, edit, dan hapus transaksi.
+- Transaksi Pembelian
+Catat hutang dari pembelian barang.
+- Laporan
+Data transaksi otomatis tersinkronisasi ke summary table untuk laporan keuangan.
 
-## 1. Pendahuluan
-NGEBASRENG adalah aplikasi desktop yang digunakan untuk membantu pengelolaan usaha
-penjualan basreng secara sederhana dan terstruktur.
+6. Navigasi Aplikasi
+- Menu Utama → akses ke Dashboard, Penjualan, Pembelian, dan Laporan.
+- Form Input → isi detail transaksi (tanggal, jumlah, harga, status).
+- Tombol Simpan/Edit/Hapus → mengelola data transaksi.
+- Summary Table → menampilkan total hutang/piutang secara otomatis.
 
-Aplikasi ini ditujukan untuk pelaku UMKM kecil serta keperluan akademik.
+7. Tips Penggunaan
+- Gunakan virtual environment agar dependency tetap terkontrol.
+- Pastikan database SQLite tidak dihapus agar data transaksi tetap tersimpan.
+- Lakukan commit berkala ke GitHub untuk menjaga versi aplikasi.
 
-## 2. Instalasi Aplikasi
+8. Troubleshooting
+- Aplikasi tidak jalan → cek versi Python (python --version).
+- GUI error → pastikan PySide6 sudah terinstall (pip install PySide6).
+- Data tidak tersimpan → cek file database .sqlite3 di folder project.
 
-### 2.1 Persyaratan Sistem
-- Sistem Operasi: Windows
-- Python 3.12
-- Library PySide6
+9. Pengembang
+Author: Muhammad Farel(unclesamm-13)
+Tujuan: Project UAS Pemrograman Visual – Semester 3
 
-### 2.2 Instalasi
-1. Install Python dari https://www.python.org
-2. Buka Command Prompt
-3. Install PySide6:
-```bash
-pip install PySide6
-4.Jalankan aplikasi :
-python main.py atau 
 
-3. Cara Menggunakan Aplikasi
-    3.1 Dashboard
-
-        Menampilkan ringkasan:
-
-            Total penjualan
-
-            Total pembelian
-
-            Laba bersih
-
-            Utang dan piutang
-
-        Terdapat tombol Reset Semua Data untuk menghapus seluruh data usaha.
-
-    3.2 Manajemen Pembelian
-
-        Tambah data pembelian basreng atau kemasan
-
-        Edit data melalui dialog (modal)
-
-        Hapus data pembelian
-
-        Data otomatis tersimpan ke database
-
-    3.3 Manajemen Varian Produk
-
-        Tambah varian (berat & harga jual)
-
-        Edit dan hapus varian
-
-        Varian digunakan untuk perhitungan dan penjualan
-
-    3.4 Perhitungan Kemasan & HPP
-
-        Pilih pembelian basreng
-
-        Pilih varian produk
-
-        Aplikasi menghitung:
-
-            Jumlah paket teoritis
-
-            Rekomendasi kemasan
-
-            HPP per paket
-
-            Estimasi laba
-
-    3.5 Penjualan
-
-        Input transaksi penjualan
-
-        Data penjualan otomatis masuk ke laporan dan dashboard
-
-    3.6 Laporan Keuangan
-        Menampilkan:
-
-            Total pembelian
-
-            Total penjualan
-
-            Laba
-
-            Utang & piutang
-
-        Filter berdasarkan rentang tanggal
-
-    3.7 About
-
-        Menampilkan informasi aplikasi dan pengembang
-4. Penutupan Aplikasi
-
-    Saat menutup aplikasi, akan muncul dialog konfirmasi
-
-    Bertujuan mencegah kehilangan data secara tidak sengaja
-
-5. Catatan
-
-    Database bersifat lokal (SQLite)
-
-    Data tidak dikirim ke server
-
-    Aplikasi aman digunakan secara offline

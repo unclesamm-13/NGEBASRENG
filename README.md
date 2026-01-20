@@ -31,6 +31,8 @@ BASRENG_APP/
 
 │── assets/          # Gambar/icon 
 
+│── database/        # Database NGEBASRENG
+
 
 │── main.py          # Entry point aplikasi 
 

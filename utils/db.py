@@ -1,6 +1,8 @@
-import sqlite3
 import os
 import sys
+import shutil
+import sqlite3
+from pathlib import Path
 
 # ======================================================
 # PATH DATABASE (AMAN PYINSTALLER & MODE DEV)
@@ -12,24 +14,41 @@ def get_base_path():
     Support Python biasa & PyInstaller (.exe)
     """
     if getattr(sys, 'frozen', False):
-        # Mode EXE
+        # Mode EXE (PyInstaller)
         return sys._MEIPASS
     else:
         # Mode Python biasa
         return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-BASE_DIR = get_base_path()
-DB_DIR = os.path.join(BASE_DIR, "database")
-DB_PATH = os.path.join(DB_DIR, "basreng.db")
 
-os.makedirs(DB_DIR, exist_ok=True)
+def setup_database():
+    """
+    Setup database: copy template kosong ke folder permanen user
+    jika belum ada, lalu kembalikan path database permanen.
+    """
+    # Lokasi database permanen di Documents
+    db_path = Path.home() / "Documents" / "NGEBASRENG" / "basreng.db"
+
+    # Buat folder kalau belum ada
+    os.makedirs(db_path.parent, exist_ok=True)
+
+    # Path template database (di bundle / project)
+    base_dir = get_base_path()
+    template_db = os.path.join(base_dir, "database", "basreng.db")
+
+    # Kalau database permanen belum ada, copy dari template
+    if not db_path.exists():
+        shutil.copy(template_db, db_path)
+
+    return str(db_path)
 
 
 def get_connection():
     """
-    Membuat koneksi ke database SQLite.
+    Membuat koneksi ke database SQLite permanen.
     """
-    return sqlite3.connect(DB_PATH)
+    db_file = setup_database()
+    return sqlite3.connect(db_file)
 
 
 

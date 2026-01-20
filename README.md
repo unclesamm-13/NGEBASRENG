@@ -24,11 +24,18 @@ Project ini dibuat untuk kebutuhan kuliah **Pemrograman Visual** dan dikembangka
 
 ## 📂 Struktur Project
 BASRENG_APP/ 
+
 │── ui/              # File tampilan (UI) 
+
 │── utils/           # Helper & fungsi tambahan 
+
 │── assets/          # Gambar/icon 
+
+
 │── main.py          # Entry point aplikasi 
+
 │── requirements.txt # Dependency project
+
 │── README.md        # Dokumentasi project
 
 ---

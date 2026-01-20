@@ -17,6 +17,7 @@ NGEBASRENG adalah aplikasi berbasis Python + PySide6 untuk mengelola penjualan b
         venv\Scripts\activate   # Windows
         source venv/bin/activate # Linux/Mac
    3. Install dependencies:
+      
         pip install -r requirements.txt
 
 ## 4. Menjalankan Aplikasi

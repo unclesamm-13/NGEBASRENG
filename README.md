@@ -1,66 +1,60 @@
-# NGEBASRENG  
-Aplikasi Manajemen Usaha Basreng Berbasis Desktop
+# NGEBASRENG 🍟
 
-## Deskripsi
-NGEBASRENG adalah aplikasi desktop berbasis Python (PySide6) yang digunakan untuk
-mengelola usaha penjualan basreng, meliputi:
-- Manajemen pembelian
-- Manajemen varian produk
-- Perhitungan kemasan dan HPP
-- Penjualan
-- Laporan keuangan
-- Dashboard ringkasan usaha
+Aplikasi manajemen penjualan basreng (baso goreng) dengan tampilan GUI berbasis **Python + PySide6**.  
+Project ini dibuat untuk kebutuhan kuliah **Pemrograman Visual** dan dikembangkan agar mudah digunakan untuk mengelola transaksi, hutang, dan piutang.
 
-Aplikasi ini dibuat sebagai **Proyek UAS Mata Kuliah Pemrograman Visual**.
+---
+
+## 🚀 Fitur Utama
+- **Dashboard interaktif**: menampilkan ringkasan hutang (pembelian) dan piutang (penjualan).
+- **Manajemen transaksi**: input, edit, dan hapus data penjualan/pembelian.
+- **Laporan otomatis**: sinkronisasi data transaksi dengan summary table.
+- **Cross-platform**: bisa dijalankan di Windows, Linux, dan macOS.
+- **UI modern**: menggunakan PySide6 untuk tampilan yang lebih elegan.
 
 ---
 
 ## 🛠️ Teknologi yang Digunakan
-- Python 3.12
-- PySide6 (Qt for Python)
-- SQLite (database lokal)
-- Qt Designer (opsional untuk UI)
-- Git & GitHub
+- **Python 3.10+**
+- **PySide6** (GUI)
+- **SQLite3** (database lokal)
+- **Utils & Assets** untuk modularisasi kode
 
 ---
 
-## 📂 Struktur Folder
-BASRENG_APP/
-├── assets/ # Logo & ikon
-├── ui/ # File UI (dashboard, pembelian, dll)
-├── utils/ # Database & logika perhitungan
-├── database/ # File SQLite
-├── main.py # Entry point aplikasi
-└── README.md
+## 📂 Struktur Project
+BASRENG_APP/ 
+│── ui/              # File tampilan (UI) 
+│── utils/           # Helper & fungsi tambahan 
+│── assets/          # Gambar/icon 
+│── main.py          # Entry point aplikasi 
+│── requirements.txt # Dependency project
+│── README.md        # Dokumentasi project
 
-## 🚀 Cara Menjalankan Aplikasi
-1. Pastikan Python 3.12 sudah terinstal
-2. Install dependency:
-```bash
-pip install PySide6
-3. Jalankan aplikasi:
+---
+
+## ⚙️ Instalasi & Menjalankan
+1. Clone repo:
+   ```bash
+   git clone https://github.com/unclesamm-13/NGEBASRENG.git
+   cd NGEBASRENG
+2. Buat virtual environment (opsional tapi disarankan):
+    python -m venv venv
+    source venv/bin/activate   # Linux/Mac
+    venv\Scripts\activate      # Windows
+3. Install dependencies:
+    pip install -r requirements.txt
+4. Jalankan aplikasi:
 python main.py
 
-✨ Fitur Utama
+## 📌 Catatan
+- Pastikan Python sudah terinstall minimal versi 3.10.
+- Database default menggunakan SQLite, bisa diganti sesuai kebutuhan.
+- Project ini masih dalam tahap pengembangan.
 
-    Dashboard KPI usaha
+## 👨‍💻 Author
+Muhammad Farel (unclesamm-13)
+Mahasiswa Semester 3 Teknik Informatika – Pemrograman Visual
+Pontianak, Kalimantan Barat, Indonesia
 
-    CRUD Pembelian, Varian, dan Penjualan
 
-    Perhitungan otomatis kemasan & HPP
-
-    Laporan keuangan ringkas
-
-    Reset data usaha
-
-    Splash screen & About dialog
-
-👨‍💻 Pengembang
-
-    Nama : Muhammad Farel
-
-    NIM  : 3202416015
-
-    Prodi : Teknik Informatika
-
-    Tahun : 2026
